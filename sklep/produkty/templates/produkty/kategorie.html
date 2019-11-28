@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kategorie</title>
+</head>
+<body>
+<h1>Sklep internetowy Jaro z Polski</h1>
+   Kategorie produktów:
+<br />
+{% if kats %}
+    <ul>
+    {% for kat in kats %}
+        <li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>
+        <!--<li><a href="{% url 'index'  %}">{{ kat.nazwa }}</a></li>-->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
+</body>
+</html>

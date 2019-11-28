@@ -1,0 +1,75 @@
+
+
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'produkty/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkt</title>
+
+</head>
+<body>
+
+<div id="container">
+
+        <div id="logo">
+            {% load static %}
+            <a href="{% url 'index'  %}"><img  height="125" src="{% static "/produkty/logo.png" %}" alt="My logo"></a>
+            </div>
+
+        <div id="topbarr">
+
+        <div id="topbar1">
+        <div id="t1">
+            <a href="{% url 'index' %}"> <h1>SZUKAJ</h1></a>
+
+        </div>
+        <div id="t2">
+            <a href="{% url 'index' %}"><h1> ZAMÓWIENIA </h1></a>
+
+        </div>
+
+
+         <div style="clear:both;"></div>
+    </div>
+
+        </div>
+       <div style="clear:both;"></div>
+
+    <div id="menu">
+        <h2>KATEGORIE:</h2>
+          {% if kats %}
+        <ul>
+        {% for kat in kats %}
+            <li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>
+            <!--<li><a href="{% url 'index'  %}">{{ kat.nazwa }}</a></li>-->
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products are available.</p>
+    {% endif %}
+    </div>
+
+    <div id="content">
+
+        {% block strona %}
+            {% endblock strona %}
+        {% block contents %}
+            {% endblock %}
+        {% block kategoria %}
+            {% endblock %}
+
+    </div>
+    <div id="footer">
+
+        Aplikacja wykonana jako "Projekt Przejściowy" dla AHE Łódź.
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

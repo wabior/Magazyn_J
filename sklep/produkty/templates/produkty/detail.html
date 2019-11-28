@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+Kategoria: {{ produkt.kategoria }}
+<a href = " {% {produkt.kategoria} %} " >dupa </a>
+<br /><br />
+Produkt:
+<h1> {{ produkt }}</h1>
+<h3>Producent:  {{ produkt.producent }}</h3>
+Opis:
+<hr />
+<h4>{{ produkt.opis }}</h4>
+<hr /><br />
+Cena: {{ produkt.cena }}
+<button type="button">kup</button>
+<br/><br/><br/>
+<a href = "{% url 'index'  %}">POWRÓT</a>
+<a href = "{% url 'kategorie'  %}">kategorie</a>
+<ul>
+
+</ul>
+</body>
+</html>

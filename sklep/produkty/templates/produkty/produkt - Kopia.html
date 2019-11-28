@@ -1,0 +1,60 @@
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'produkty/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkt</title>
+
+</head>
+<body>
+
+<div id="container">
+
+    <div id="topbar">
+        <div id="logo">
+            {% load static %}
+            <img width="250" height="200" src="{% static "/produkty/logo.png" %}" alt="My logo">
+            </div>
+
+        <div id="topbarr">
+            <h1>Sklep internetowy</h1>
+            <h2>Jarosław Wabich</h2>
+            </div>
+        <div style="clear:both;"></div>
+        </div>
+
+
+    <div id="menu">
+    lista produktów:
+    <br />
+    {% if prod_list %}
+        <ul>
+        {% for produkt in prod_list %}
+            <li><a href="{% url 'detail' produkt.id %}">{{ produkt.nazwa }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products are available.</p>
+    {% endif %}
+    </div>
+
+    <div id="content">
+        <!--<h4>Witaj w sklepie internetowym.</h4>-->
+        <!--<h5>Strona wykonana w Django</h5>-->
+        <!--Na zadanie domowe z Językówi paradygmatów programowania.-->
+
+        {% block contents %}
+
+        {% endblock %}
+
+    </div>
+    <div id="footer">
+        udanych zakupów :)
+    </div>
+
+</div>
+</body>
+</html>
+<li><a href="/produkty/{{ produkt.id }}">{{ produkt.nazwa }}</a></li>

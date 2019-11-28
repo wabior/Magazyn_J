@@ -1,0 +1,33 @@
+{% extends 'produkty/baza.html' %}
+
+{% block contents %}
+<div id="opis">
+
+     <h3> Kategoria: &nbsp; &nbsp; <a href = "{%  url 'kategoria' produkt.kategoria.id %}  " >
+    {{ produkt.kategoria }}</a></h3>
+
+    <h1> {{ produkt }}</h1>
+    <h3>Producent:  &nbsp; &nbsp; {{ produkt.producent }}</h3>
+</div>
+
+<div id="obraz">
+
+    {% if produkt.obraz %}
+    <img src="{{ produkt.obraz.url }}"  width ="250" height="200" alt="obrazek"/>
+    {% endif %}
+</div>
+
+<div style="clear:both;"></div>
+    Opis:
+    <hr />
+    <h4>{{ produkt.opis }}</h4>
+    <hr /><br />
+
+<div id="cena">
+        Cena: &nbsp; {{ produkt.cena }} zł &nbsp; &nbsp;
+    <button type="button">dodaj</button>
+    </div>
+    </br>
+
+
+{% endblock %}

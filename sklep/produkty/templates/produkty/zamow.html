@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zamow</title>
+</head>
+<body>
+<h3>lista produktów:</h3>
+    <br />
+    {% if prod_list %}
+        <form action="." method = "POST">{%csrf_token%}
+            <ul>
+            {% for produkt in prod_list %}
+                <p> {{ produkt.id }} .  {{ produkt.nazwa}}  {{ form }}</p>
+            {% endfor %}
+            </ul>
+            <input type="submit" value="dodaj"/>
+        </form>
+    {% else %}
+        <p>No products are available.</p>
+    {% endif %}
+<!--<form action="." method = "POST">-->
+    <!--{%csrf_token%}-->
+    <!--{{form.as_p}}-->
+    <!--<input type="submit" value="dodaj"/>-->
+<!--</form>-->
+
+</body>
+</html>

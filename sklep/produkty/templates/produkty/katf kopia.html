@@ -1,0 +1,46 @@
+{% extends 'produkty/baza.html' %}
+
+{% block kategoria %}
+
+<h3>Kategoria:&nbsp &nbsp {{ kat }}</h3>
+
+{% if kategoria_widok %}
+<form action="." method = "POST">{%csrf_token%}
+
+    <table style="width:100%">
+        <tr>
+            <th>nazwa</th>
+            <th>numer</th>
+            <th>stan</th>
+            <th>cena</th>
+            <th class= "th1">zamow</th>
+        </tr>
+        {% for prod in kategoria_widok %}
+            <tr>
+                <td>
+                    <a href="{% url 'detail' prod.id %}">{{ prod.nazwa }} </a>
+                </td>
+                <td>
+                    {{ prod.numer }}
+                </td>
+                <td>
+                    {{ prod.stan }}
+                </td>
+                <td>
+                    {{ prod.cena }}
+                </td>
+                <td class = "td1">
+                    {{ form1.as_p }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <input type="submit" value="dodaj"/>
+</form>
+
+{% else %}
+    <p>No products are available.</p>
+{% endif %}
+
+{% endblock %}
