@@ -6,6 +6,27 @@ from .models import Produkty,Kategoria
 from .forms import *
 # Create your views here.
 
+def search(request):
+    try:
+        q = request.GET.get('q')
+    except:
+        q = None
+    if q:
+        kats = Kategoria.objects.all()
+        produkty = Produkty.objects.filter(nazwa__icontains=q)
+        produkty |= Produkty.objects.filter(opis__icontains=q)
+        produkty |= Produkty.objects.filter(numer__icontains=q)
+        context = {'query' : q,
+                   'produkty' : produkty,
+                   'kats'   : kats,}
+        template = 'produkty/result.html'
+    else:
+        context = {}
+        template = 'produkty/index.html'
+
+    return render(request,template,context)
+
+
 def detail(request, produkt_id):
     produkt = Produkty.objects.get(pk=produkt_id)
     kats = Kategoria.objects.all()

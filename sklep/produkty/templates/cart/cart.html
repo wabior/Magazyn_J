@@ -1,0 +1,30 @@
+{% extends 'produkty/baza.html' %}
+
+{% block contents %}
+
+{% if cart.products.all %}
+    <h1>zamówienie {{cart.id}} </h1>
+    <table style="width:100%">
+        <tr>
+            <th style="width=20px">id</th>
+            <th>nazwa</th>
+        </tr>
+    {% for item in cart.products.all %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.nazwa }}</td>
+            <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% else %}
+    BRAK ZAMÓWIEŃ
+{% endif %}
+
+{% if not kats %}
+
+<h2>brak kategorii</h2>
+{% endif %}
+
+{% endblock contents %}

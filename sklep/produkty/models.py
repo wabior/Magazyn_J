@@ -49,6 +49,7 @@ class Produkty(models.Model):
     updated = models.DateTimeField(auto_now=True)
     stan    = models.IntegerField(default=0)
     numer   = models.IntegerField(max_length=6,default=n_cz + 10)
+    slug    = models.SlugField()
 
     class Meta:
         verbose_name        = "Produkt"

@@ -13,7 +13,7 @@
             <th>numer</th>
             <th>stan</th>
             <th>cena</th>
-            <th class= "th1">zamow</th>
+            <!--<th class= "th1">zamow</th>-->
         </tr>
         {% for prod in kategoria_widok %}
             <tr>
@@ -29,14 +29,14 @@
                 <td>
                     {{ prod.cena }}
                 </td>
-                <td class = "td1">
-                    {{ form1.as_p }}
-                </td>
+                <!--<td class = "td1">-->
+                    <!--{{ form1.as_p }}-->
+                <!--</td>-->
             </tr>
         {% endfor %}
     </table>
 
-    <input type="submit" value="dodaj"/>
+    <!--<input type="submit" value="dupa"/>-->
 </form>
 
 {% else %}

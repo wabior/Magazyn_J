@@ -1,0 +1,40 @@
+{% extends 'produkty/baza.html' %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'produkty/style.css' %}">
+
+
+{% block contents %}
+
+{% if produkty %}
+    <h2>szukałeś: {{ query }}</h2>
+    <table style="width:100%">
+            <tr>
+                <th>nazwa</th>
+                <th>numer</th>
+                <th>stan</th>
+                <th>cena</th>
+
+            </tr>
+            {% for prod in produkty %}
+                <tr>
+                    <td>
+                        <a href="{% url 'detail' prod.id %}">{{ prod.nazwa }} </a>
+                    </td>
+                    <td>
+                        {{ prod.numer }}
+                    </td>
+                    <td>
+                        {{ prod.stan }}
+                    </td>
+                    <td>
+                        {{ prod.cena }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+{% else %}
+<h2>nie znaleziono {{ query }} </h2>
+
+{% endif %}
+
+{% endblock contents %}

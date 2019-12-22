@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Moje apki
     'produkty',
+    'koszyk',
    # 'django_extensions'
 
 ]

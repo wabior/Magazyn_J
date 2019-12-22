@@ -1,8 +1,8 @@
 body
 {
-    background: white;
+    background: rgb(225, 238, 242);
     font-family: 'Lato';
-    color:#004080;
+    color:rgb(21, 111, 158);#004080
 }
 
 li a
@@ -83,7 +83,7 @@ li a:hover
 
 #topbar1
 {
-    margin-top:20;
+    margin-top:8;
     width:600px;
     height:80px;
     color:white;
@@ -93,16 +93,16 @@ li a:hover
 #t1
 {
     height:100%;
-    width:50%;
+    width:60%;
     float:left;
     background-color:#b2d6ea;
-    color: white;
     text-align:center;
+
 }
 
 #t2
 {
-    width:50%;
+    width:40%;
     height:100%;
     float:left;
     text-align:center;
@@ -148,16 +148,20 @@ text-align:right;
 }
 
 button {
-  background-color:red;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0px 0px;
-  cursor: pointer;
+  	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
 }
 
 input[type=submit] {
@@ -183,10 +187,28 @@ input[type=number]{
     width:  50px  ;
 
 }
+
+.szukaj {
+     width: 60%;
+     padding: 5px;
+     margin-top:    20px;
+     margin-right:    10px;
+     font-size: 16px;
+     border-width: 1px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 0px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+
+
+      }
 a
 {
     text-decoration:none;
-    color:black;
+    color: rgb(4, 49, 105);
 }
 a:hover
 {

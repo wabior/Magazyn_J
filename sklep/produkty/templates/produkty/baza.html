@@ -23,11 +23,15 @@
 
         <div id="topbar1">
         <div id="t1">
-            <a href="{% url 'index' %}"> <h1>SZUKAJ</h1></a>
+            <form role="search" action="/s/">
 
+                <input class= "szukaj" type="text" name="q" placeholder="szukaj">
+                <button type="submit">znajdź</button>
+
+            </form>
         </div>
         <div id="t2">
-            <a href="{% url 'index' %}"><h1> ZAMÓWIENIA </h1></a>
+            <a href="{% url 'cart' %}"><h1> ZAMÓWIENIA </h1></a>
 
         </div>
 
@@ -39,8 +43,8 @@
        <div style="clear:both;"></div>
 
     <div id="menu">
+        {% if kats %}
         <h2>KATEGORIE:</h2>
-          {% if kats %}
         <ul>
         {% for kat in kats %}
             <li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>
