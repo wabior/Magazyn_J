@@ -50,6 +50,7 @@ class Produkty(models.Model):
     stan    = models.IntegerField(default=0)
     numer   = models.IntegerField(max_length=6,default=n_cz + 10)
     slug    = models.SlugField()
+    lokalizacja = models.IntegerField(max_length=6,default=0)
 
     class Meta:
         verbose_name        = "Produkt"

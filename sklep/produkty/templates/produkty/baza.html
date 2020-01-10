@@ -1,5 +1,4 @@
 
-
 {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'produkty/style.css' %}">
 
@@ -12,11 +11,12 @@
 </head>
 <body>
 
+{% if user.is_authenticated %}
 <div id="container">
 
         <div id="logo">
             {% load static %}
-            <a href="{% url 'index'  %}"><img  height="125" src="{% static "/produkty/logo.png" %}" alt="My logo"></a>
+            <a href="{% url 'index'  %}"><img  height="125" src="{% static '/produkty/logo.png' %}" alt="My logo"></a>
             </div>
 
         <div id="topbarr">
@@ -34,6 +34,10 @@
             <a href="{% url 'cart' %}"><h1> ZAMÓWIENIA </h1></a>
 
         </div>
+            <div id="t3">
+                <a href="{% url 'logout' %}"><h1> WYLOGUJ </h1></a>
+
+            </div>
 
 
          <div style="clear:both;"></div>
@@ -74,6 +78,9 @@
 
 </div>
 
+{% else %}
+<h1>Zaloguj się</h1>
+{% endif %}
 </body>
 </html>
 

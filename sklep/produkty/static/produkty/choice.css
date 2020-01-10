@@ -1,0 +1,99 @@
+body
+{
+	background-image: url("prism.png");
+	font-size: 22px;
+	font-family: "Arial";
+}
+
+#funkcja
+{
+	background-image: url("chevron.png");
+	color: #555;
+	width: 300px;
+	border-radius: 20px;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	-webkit-box-shadow: 10px 10px 30px 10px rgba(186,186,186,0.9);
+	-moz-box-shadow: 10px 10px 30px 10px rgba(186,186,186,0.9);
+	box-shadow: 10px 10px 30px 10px rgba(186,186,186,0.9);
+	
+	
+}
+#funkcja2
+{
+	margin-left: 75%;
+	margin-top: 200px;
+}
+#left
+{
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+}
+#right
+{
+	float:left;
+	margin-left: 20px;
+}
+#bottom
+{
+	clear:both;
+}
+
+input[type=button]
+{
+	width: 140px;
+	background-color: #444;
+	font-size: 19px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+input[type=button]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+	-moz-box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+	box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+}
+
+input[type=button]:hover
+{
+	background-color: #222;
+}
+
+
+#funkcja2 input[type=button]
+{
+	width: 300px;
+	#background-color: #FF0000;
+	font-size: 20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+#funkcja2 input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+	-moz-box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+	box-shadow: 0px 0px 15px 7px rgba(186,186,186,0.9);
+}
+
+#funkcja2 input[type=submit]:hover
+{
+	background-color: #EE0000;
+}
+

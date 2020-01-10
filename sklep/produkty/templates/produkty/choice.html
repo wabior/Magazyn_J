@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'produkty/choice.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wybór funkcji</title>
+</head>
+<body>
+<div id="funkcja">
+	<center>
+	<h2>Wybierz funkcję:</h2>
+
+			<div id="left">
+			<input type="button" value="Sprzedawca"
+			onclick = "location.href='{% url 'index' %}'">
+			</div>
+			<div id="right">
+			<input type="button" value="Magazynier"
+			onclick = "location.href='{% url 'index' %}'">
+			</div>
+			<div id="bottom">
+			<br>
+			</div>
+
+	</center>
+
+</div>
+
+<div id="funkcja2">
+	<input type="button" value="Wyloguj się"
+	onclick = "location.href='{% url 'login' %}'">
+</div>
+</body>
+</html>

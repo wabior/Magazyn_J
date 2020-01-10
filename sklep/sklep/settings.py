@@ -127,5 +127,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = 'images'
+LOGIN_REDIRECT_URL = 'choice'
+LOGOUT_REDIRECT_URL = 'login'
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

@@ -21,19 +21,25 @@ from django.conf import settings
 from django.views.static import serve
 from django.conf.urls.static import static
 from produkty.views import *
+from django.urls import include
 from koszyk.views import view, update_cart, remove_from_cart
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('produkty/<int:produkt_id>/', detail, name='detail'),
-    path('', index, name='index'),
+    path('',auth_views.LoginView.as_view(), name='login'),
+    path('index',   index, name = 'index'),
+    #path('', include('django.contrib.auth.urls')),
+    path('login',auth_views.LoginView.as_view(), name='login'),
+    path('logout',auth_views.LogoutView.as_view(), name='logout'),
     path('s/', search, name='search'),
     path('cart/<int:id>', remove_from_cart, name='remove_from_cart'),
     path('cart/<nazwa>', update_cart, name='update_cart'),
     path('cart/', view, name='cart'),
-
     path('kats', kategorie, name='kategorie'),
     path('kategoria/<int:id>/', kategoria, name='kategoria'),
     path('zamow',zamowienie, name='zamowienie'),
+    path('choice', choice, name='choice'),
 
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )

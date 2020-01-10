@@ -1,10 +1,16 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import Http404
 from django.http import HttpResponse
 from django.template import loader
 from .models import Produkty,Kategoria
 from .forms import *
+from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User, auth
+from django.contrib.auth import logout
 # Create your views here.
+
+
 
 def search(request):
     try:
@@ -44,6 +50,24 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username,password=password)
+
+        if user is not None:
+            auth.login(request, user)
+
+        else:
+            pass
+            #messages.error(request,"Dupa")
+    return render(request,'produkty/login.html')
+
+def logout_view(request):
+    logout(request)
+
 def kategorie(request):
     kats = Kategoria.objects.all()
     template = loader.get_template('produkty/kategorie.html')
@@ -73,3 +97,6 @@ def zamowienie(request):
         'prod_list': prod_list,
     }
     return render(request,'produkty/zamow.html',context)
+
+def choice(request):
+    return render(request,'produkty/choice.html')

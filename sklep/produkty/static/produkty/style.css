@@ -1,15 +1,17 @@
 body
 {
-    background: rgb(225, 238, 242);
-    font-family: 'Lato';
-    color:rgb(21, 111, 158);#004080
+    background-color:rgb(180,210,250);
+	background-image: url("prism.png");
+	color:rgb(215,215,215);
+	font-family: "Trebuchet MS";
 }
 
 li a
 {
-    color:#004080;
+    color:rgb(215,215,215);##004080;
     text-decoration:none;
 }
+
 li a:hover
 {
     color:#yellow;
@@ -20,13 +22,14 @@ li a:hover
     width:1000px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 #topbar
 {
     height:120px;
     width:800px;
-    color: #3366ff;
+   # color: #3366ff;
 }
 
 #logo
@@ -51,7 +54,8 @@ li a:hover
     width:200px;
     min-height:400px;
     text-align:left;
-    color:#004080;
+    color:rgb(215,215,215);#004080;
+    #font-family:"Courier";
 }
 
 #content
@@ -79,6 +83,7 @@ li a:hover
     width:600px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 #topbar1
@@ -95,7 +100,7 @@ li a:hover
     height:100%;
     width:60%;
     float:left;
-    background-color:#b2d6ea;
+    #background-color:#b2d6ea;
     text-align:center;
 
 }
@@ -106,7 +111,7 @@ li a:hover
     height:100%;
     float:left;
     text-align:center;
-    background-color:#b1cad8;
+    #background-color:#b1cad8;
     color:white;
 }
 #t3
@@ -125,10 +130,11 @@ li a:hover
     width:600px;
     min-height:400px;
     text-align:center;
-    color:#004080;
+    color:rgb(215,215,215);
 
     clear:both;
 }
+
 #cena
 {
 float:top;
@@ -138,8 +144,11 @@ text-align:right;
 
 #opis
 {
+    border:10px;
+
     width:350px;
     float:left;
+    font-family: "Courier", Times, serif;
 }
 #obraz
 {
@@ -208,7 +217,7 @@ input[type=number]{
 a
 {
     text-decoration:none;
-    color: rgb(4, 49, 105);
+    color:rgb(215,215,215);
 }
 a:hover
 {
