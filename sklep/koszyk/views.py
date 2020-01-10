@@ -11,6 +11,25 @@ def view(request):
     template = "cart/cart.html"
     return render(request,template,context)
 
+def cart_nr(request,id):
+    cart = Cart.objects.get(id=id)    #koszyk1
+    kats = Kategoria.objects.all()
+    context = {"cart": cart, "kats":kats,}
+    template = "cart/cart_nr.html"
+    return render(request, template, context)
+
+def carts(request):
+    all_carts = Cart.objects.all()
+    last_cart = Cart.objects.last()
+    context = {"all_carts": all_carts, "last_cart":last_cart, }
+    template = "cart/carts.html"
+    return render(request, template, context)
+
+def new_cart(request):
+    new_cart = Cart()
+    save = new_cart.save()
+    return HttpResponseRedirect(reverse("carts"))
+
 def update_cart(request,nazwa):
     cart = Cart.objects.all()[0]
     product = Produkty.objects.get(nazwa=nazwa)
@@ -28,4 +47,6 @@ def remove_from_cart(request,id):
     #cartitem.cart = None
     #cartitem.save()
     return HttpResponseRedirect(reverse("cart"))
+
+
 
