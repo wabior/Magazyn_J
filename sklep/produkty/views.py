@@ -99,4 +99,4 @@ def zamowienie(request):
     return render(request,'produkty/zamow.html',context)
 
 def choice(request):
-    return render(request,'produkty/choice.html')
+    return render(request,'registration/choice.html')

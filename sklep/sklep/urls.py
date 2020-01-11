@@ -22,7 +22,7 @@ from django.views.static import serve
 from django.conf.urls.static import static
 from produkty.views import *
 from django.urls import include
-from koszyk.views import view, update_cart, remove_from_cart, carts, cart_nr, new_cart
+from koszyk.views import *
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -30,7 +30,6 @@ urlpatterns = [
     path('produkty/<int:produkt_id>/', detail, name='detail'),
     path('',auth_views.LoginView.as_view(), name='login'),
     path('index',   index, name = 'index'),
-    #path('', include('django.contrib.auth.urls')),
     path('login',auth_views.LoginView.as_view(), name='login'),
     path('logout',auth_views.LogoutView.as_view(), name='logout'),
     path('s/', search, name='search'),
@@ -44,5 +43,6 @@ urlpatterns = [
     path('kategoria/<int:id>/', kategoria, name='kategoria'),
     path('zamow',zamowienie, name='zamowienie'),
     path('choice', choice, name='choice'),
-
+    path('magazyn', magazyn, name='magazyn'),
+    path('delete_cart/<int:id>', delete_cart, name='delete_cart'),
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )

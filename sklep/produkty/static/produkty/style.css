@@ -42,8 +42,8 @@ li a:hover
 }
 #topbarr
 {
-    width:600px;
-    height:100px;
+    width:800px;
+    height:120px;
     float:left;
     text-align:center;
 }
@@ -62,7 +62,7 @@ li a:hover
 {
 
     float   : left;
-    width   : 600px;
+    width   : 800px;
     height  : ;
     overflow: auto;
 }
@@ -80,7 +80,7 @@ li a:hover
 
 #container1
 {
-    width:600px;
+    width:800px;
     margin-left: auto;
     margin-right: auto;
 
@@ -89,7 +89,7 @@ li a:hover
 #topbar1
 {
     margin-top:8;
-    width:600px;
+    width:1000px;
     height:80px;
     color:white;
 
@@ -97,31 +97,31 @@ li a:hover
 
 #t1
 {
-    height:100%;
-    width:60%;
+    height:;
+    width:38%;
     float:left;
-    #background-color:#b2d6ea;
+    #background-color:;
     text-align:center;
 
 }
 
 #t2
 {
-    width:40%;
-    height:100%;
+    width:35%;
+    height:;
     float:left;
     text-align:center;
-    #background-color:#b1cad8;
+    #background-color:;
     color:white;
 }
 #t3
 {
-    width:0%;
-    height:100%;
+    width:27%;
+    height:;
     float:left;
     color:white;
-    text-align:center;
-    background-color:#abdffc;
+    text-align:left;
+    background-color:;
 }
 
 #main

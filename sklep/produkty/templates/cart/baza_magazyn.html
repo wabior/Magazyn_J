@@ -1,0 +1,82 @@
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'produkty/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Baza Magazyn</title>
+</head>
+<body>
+
+<div id="container">
+    <div id="logo">
+            {% load static %}
+            <a href="{% url 'index'  %}"><img  height="125" src="{% static '/produkty/logo.png' %}" alt="My logo"></a>
+    </div>
+
+
+    <div id="topbarr">
+
+        <div id="topbar1">
+            <div id="t1">
+                <h1>WIDOK MAGAZYNIERA</h1><br>
+            </div>
+            <div id="t2">
+                 <!--<a href="{% url 'cart' %}"><h1> ZAMÓWIENIE </h1></a>-->
+                <a href="{% url 'magazyn' %}"><h1> ZAMÓWIENIA </h1></a>
+            </div>
+            <div id="t3">
+                <a href="{% url 'logout' %}"><h1> WYLOGUJ </h1></a>
+            </div>
+
+        </div>
+    </div>
+        <div style="clear:both;"></div>
+
+
+
+        <div id="topbar1">
+            <div id="t3">
+                <h1>Lista zamówień</h1>
+            </div>
+            <div id="t1">
+                 <form role="search" action="/s/">
+                        <input class= "szukaj" type="text" name="q" placeholder="szukaj">
+                        <button type="submit">znajdź</button>
+                    </form>
+            </div>
+            <div id="t2">
+                <a href= " {% url 'new_cart' %} " ><h1>Nowe zamówienie</h1></a>
+            </div>
+
+        </div>
+
+    <div style="clear:both;"></div>
+    <div id = "content">
+
+            <h3>ilosc zamówień: {{ last_cart.id }}</h3>
+
+        <table style="width:100%">
+        <tr>
+            <th style="width:120px">id</th>
+            <th style="width:100px">status</th>
+            <th style="width:100px">akcja</th>
+        </tr>
+    {% for c in all_carts %}
+        <tr>
+            <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
+            <td>{{ c.status }}</td>
+            <td><a href= " {% url 'delete_cart' c.id %} " >usuń</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

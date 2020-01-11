@@ -2,9 +2,10 @@
 
 {% block contents %}
 <br>
-<h1>LISTA ZAMÓWIEN </h1>
+<h1>LISTA ZAMÓWIEN</h1>
+<a href= " {% url 'new_cart' %} " ><h1>Nowe zamówienie</h1></a>
 <h3>ilosc zamówień: {{ last_cart.id }}</h3>
-<a href= " {% url 'new_cart' %} " >Nowe zamówienie</a><br><br>
+
 
 {% for c in all_carts %}
 <a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a><br>

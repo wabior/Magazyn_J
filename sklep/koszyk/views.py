@@ -25,10 +25,17 @@ def carts(request):
     template = "cart/carts.html"
     return render(request, template, context)
 
+def magazyn(request):
+    all_carts = Cart.objects.all()
+    last_cart = Cart.objects.last()
+    context = {"all_carts": all_carts, "last_cart": last_cart, }
+    template = "cart/baza_magazyn.html"
+    return render(request, template, context)
+
 def new_cart(request):
     new_cart = Cart()
     save = new_cart.save()
-    return HttpResponseRedirect(reverse("carts"))
+    return HttpResponseRedirect(reverse("magazyn"))
 
 def update_cart(request,nazwa):
     cart = Cart.objects.all()[0]
@@ -47,6 +54,13 @@ def remove_from_cart(request,id):
     #cartitem.cart = None
     #cartitem.save()
     return HttpResponseRedirect(reverse("cart"))
+
+def delete_cart(request,id):
+    c = Cart.objects.get(id=id)
+    usun = c.delete()
+    return HttpResponseRedirect(reverse("magazyn"))
+
+
 
 
 
