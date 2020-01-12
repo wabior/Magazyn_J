@@ -33,11 +33,12 @@ def search(request):
     return render(request,template,context)
 
 
-def detail(request, produkt_id):
+def detail(request, produkt_id, ):
+   # cart = get_object_or_404(Cart, id=cart_id)
     produkt = Produkty.objects.get(pk=produkt_id)
     kats = Kategoria.objects.all()
-    return render(request, 'produkty/detail_block.html', {'produkt': produkt,
-                                                          'kats': kats,})
+    context = {'produkt': produkt, 'kats': kats, }
+    return render(request, 'produkty/detail_block.html', context )
 
 def index(request):
     prod_list = Produkty.objects.all()

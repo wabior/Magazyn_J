@@ -14,7 +14,7 @@ def view(request):
     return render(request,template,context)
 
 def cart_nr(request,id):
-    cart = get_object_or_404(Cart,id=id)    #koszyk1
+    cart = get_object_or_404(Cart,id=id)
     kats = Kategoria.objects.all()
     form = Zmiana_Statusu(request.POST or None, instance=cart)
     if form.is_valid():
@@ -45,13 +45,15 @@ def new_cart(request):
     return HttpResponseRedirect(reverse("magazyn"))
 
 def update_cart(request,nazwa):
-    cart = Cart.objects.all()[0]
+    Cart.objects.last()
+    cart = Cart()
+    cart.save()
     product = Produkty.objects.get(nazwa=nazwa)
                                 #if not product in cart.products.all():
     cart.products.add(product)
     # else:
     #     cart.products.remove(product)
-    return HttpResponseRedirect(reverse("cart"))
+    return HttpResponseRedirect(reverse("cart_nr"))
 
 def remove_from_cart(request,id):
     cart = Cart.objects.all()[0]
