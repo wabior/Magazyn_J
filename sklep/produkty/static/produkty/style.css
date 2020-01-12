@@ -174,7 +174,7 @@ button {
 }
 
 input[type=submit] {
-  background-color:red;
+  background-color:rgb(40,60,180);
   border: none;
   color: white;
   padding: 8px 16px;
@@ -184,7 +184,7 @@ input[type=submit] {
   font-size: 16px;
   margin: 0px 0px;
   cursor: pointer;
-  float: right;
+  float: auto;
 }
 
 input[type=number]{
@@ -256,3 +256,28 @@ th {
    border-width: 0px;   border-color: white;   border-style: solid;
 }
 
+.box
+{
+float:right;
+font-size: 19px;
+font-weight:bold;
+}
+.box select {
+  background-color: #0563af;
+  color: white;
+  padding: 7px;
+  width: 250px;
+  border: none;
+  font-size: 17px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: menupopup ;
+  appearance: menupopup ;
+  outline: none;
+}
+
+
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}

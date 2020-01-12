@@ -36,7 +36,6 @@ def search(request):
 def detail(request, produkt_id):
     produkt = Produkty.objects.get(pk=produkt_id)
     kats = Kategoria.objects.all()
-
     return render(request, 'produkty/detail_block.html', {'produkt': produkt,
                                                           'kats': kats,})
 

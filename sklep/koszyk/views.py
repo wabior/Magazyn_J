@@ -1,7 +1,9 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, get_object_or_404, redirect
 from django.urls import reverse
 # Create your views here.
 from .models import Cart
+from .forms import Zmiana_Statusu
+
 from produkty.models import Produkty, Kategoria
 
 def view(request):
@@ -12,11 +14,16 @@ def view(request):
     return render(request,template,context)
 
 def cart_nr(request,id):
-    cart = Cart.objects.get(id=id)    #koszyk1
+    cart = get_object_or_404(Cart,id=id)    #koszyk1
     kats = Kategoria.objects.all()
-    context = {"cart": cart, "kats":kats,}
+    form = Zmiana_Statusu(request.POST or None, instance=cart)
+    if form.is_valid():
+        form.save()
+        return redirect("magazyn")
+    context = {"cart": cart, "kats":kats,"form":form,}
     template = "cart/cart_nr.html"
     return render(request, template, context)
+
 
 def carts(request):
     all_carts = Cart.objects.all()

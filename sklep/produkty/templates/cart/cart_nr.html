@@ -4,15 +4,24 @@
 
 {% if cart %}
     <h1>zamówienie {{cart.id}} </h1>
+    <div class="box">
+    <form  method="POST"> {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" value="Zmień status" />
+
+    </form>
+    </div>
     <table style="width:100%">
         <tr>
             <th style="width=20px">id</th>
             <th>nazwa</th>
+            <th>stan</th>
         </tr>
     {% for item in cart.products.all %}
         <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.nazwa }}</td>
+            <td>{{ item.stan }}</td>
             <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
         </tr>
     {% endfor %}
