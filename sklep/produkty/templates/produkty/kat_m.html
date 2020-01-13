@@ -1,6 +1,7 @@
 {% extends 'produkty/baza.html' %}
 
 {% block kategoria %}
+<h1>Edycja zamówienia nr: {{ c_id }} </h1>
 
 <h3>Kategoria:&nbsp &nbsp {{ kat }}</h3>
 
@@ -18,7 +19,7 @@
         {% for prod in kategoria_widok %}
             <tr>
                 <td>
-                    <a href="{% url 'detail' prod.id  %}">{{ prod.nazwa }} </a>
+                    <a href="{% url 'detail_m' prod.id c_id %}">{{ prod.nazwa }} </a>
                 </td>
                 <td>
                     {{ prod.numer }}

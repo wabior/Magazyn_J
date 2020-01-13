@@ -223,6 +223,22 @@ a:hover
 {
     color:#77a3ea;
 }
+
+#dodaj a:link
+{
+color:rgb(50,215,50);
+font-size:25px;
+position: absolute;
+}
+#dodaj a:visited {
+  color: gold;
+  text-decoration: none}
+
+#dodaj  a:hover
+{
+    color:goldenrod;
+}
+
 table {
   border-collapse: collapse;
 }
@@ -255,6 +271,7 @@ th {
 {
    border-width: 0px;   border-color: white;   border-style: solid;
 }
+
 
 .box
 {

@@ -13,14 +13,14 @@ def view(request):
     template = "cart/cart.html"
     return render(request,template,context)
 
-def cart_nr(request,id):
-    cart = get_object_or_404(Cart,id=id)
-    kats = Kategoria.objects.all()
+def cart_nr(request,c_id):
+    cart = get_object_or_404(Cart,id=c_id)
+    #kats = Kategoria.objects.all()
     form = Zmiana_Statusu(request.POST or None, instance=cart)
     if form.is_valid():
         form.save()
         return redirect("magazyn")
-    context = {"cart": cart, "kats":kats,"form":form,}
+    context = {"cart": cart, "form":form,}
     template = "cart/cart_nr.html"
     return render(request, template, context)
 
@@ -44,24 +44,32 @@ def new_cart(request):
     save = new_cart.save()
     return HttpResponseRedirect(reverse("magazyn"))
 
-def update_cart(request,nazwa):
-    Cart.objects.last()
+def update_cart(request, nazwa):
+    #cart = Cart.objects.last()
     cart = Cart()
     cart.save()
     product = Produkty.objects.get(nazwa=nazwa)
-                                #if not product in cart.products.all():
     cart.products.add(product)
-    # else:
-    #     cart.products.remove(product)
-    return HttpResponseRedirect(reverse("cart_nr"))
+
+    #template = 'cart_nr'
+    #context = {"c_id": c_id }
+    return HttpResponseRedirect(reverse("cart"))
+    #return render(request, template, context)
+
+def update_cart_m(request, nazwa, c_id):
+    cart = Cart.objects.get(id=c_id)
+    product = Produkty.objects.get(nazwa=nazwa)
+    cart.products.add(product)
+    template = "cart/cart_nr.html"
+    context = {"c_id": c_id }
+    #return HttpResponseRedirect(reverse("cart_nr"))
+    return redirect("cart_nr",c_id)
+    #return render(request, template, context)
 
 def remove_from_cart(request,id):
     cart = Cart.objects.all()[0]
     cartitem = Produkty.objects.get(id=id)
     cart.products.remove(cartitem)
-    #cartitem.delete()
-    #cartitem.cart = None
-    #cartitem.save()
     return HttpResponseRedirect(reverse("cart"))
 
 def delete_cart(request,id):

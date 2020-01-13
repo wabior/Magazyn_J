@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Kategorie</title>
-</head>
-<body >
-<h1>Magazyn</h1>
+{% extends 'produkty/baza.html' %}
+
+{% block contents %}
+{% if c_id %}
+<h1>Edycja zamówienia nr: {{ c_id }} </h1>
    Kategorie produktów:
 <br />
 {% if kats %}
     <ul>
     {% for kat in kats %}
-        <li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>
-        <!--<li><a href="{% url 'index'  %}">{{ kat.nazwa }}</a></li>-->
+        <!--<li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>-->
+        <li><a href="{% url 'kat_m' kat.id  c_id %}">{{ kat.nazwa }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No products are available.</p>
 {% endif %}
-</body>
-</html>
+
+{% else %}
+<h1>Błąd. Nie wybrano zamówienia.</h1>
+{% endif %}
+
+{% endblock %}

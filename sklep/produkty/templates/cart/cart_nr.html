@@ -4,9 +4,13 @@
 
 {% if cart %}
     <h1>zamówienie {{cart.id}} </h1>
-    <div class="box">
+<div id="dodaj"><a href= "{% url 'kategorie' cart.id %}">DODAJ POZYCJĘ</a></div>
+<div class="box">
+
     <form  method="POST"> {% csrf_token %}
+
         {{ form.as_table }}
+
         <input type="submit" value="Zmień status" />
 
     </form>
@@ -29,11 +33,6 @@
 
 {% else %}
     BRAK ZAMÓWIEŃ
-{% endif %}
-
-{% if not kats %}
-
-<h2>brak kategorii</h2>
 {% endif %}
 
 {% endblock contents %}

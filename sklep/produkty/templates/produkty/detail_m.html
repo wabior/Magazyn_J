@@ -1,0 +1,40 @@
+{% extends 'produkty/baza.html' %}
+
+{% block contents %}
+<h1>Edycja zamówienia nr: {{ c_id }} </h1>
+
+<div id="opis">
+
+     <h3> Kategoria: &nbsp; &nbsp; <a href = "{%  url 'kategoria' produkt.kategoria.id  %}  " >
+    {{ produkt.kategoria }}</a></h3>
+
+    <h1> {{ produkt }}</h1>
+    <h3>Producent:  &nbsp; &nbsp; {{ produkt.producent }}</h3>
+</div>
+
+<div id="obraz">
+
+    {% if produkt.obraz %}
+    <img src="{{ produkt.obraz.url }}"  width ="250" height="200" alt="obrazek"/>
+    {% endif %}
+</div>
+
+<div style="clear:both;"></div>
+    Opis:
+    <hr />
+    <h4>{{ produkt.opis }}</h4>
+    <hr /><br />
+
+<div id="cena">
+        Cena: &nbsp; {{ produkt.cena }} zł &nbsp; &nbsp;
+    {% if c_id %}
+    <button type="button" onclick= " location.href= ' {% url 'update_cart_m' produkt.nazwa c_id  %} ' ">dodaj</button>
+    <!--{% else %}-->
+    <!--<button type="button" onclick= " location.href= ' {% url 'update_cart' produkt.nazwa  %} ' ">dodaj</button>-->
+    {% endif %}
+    <!--<a href="{% url 'update_cart' produkt.nazwa %}">dodaj</a>-->
+    </div>
+    </br>
+
+
+{% endblock %}

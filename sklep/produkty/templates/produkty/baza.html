@@ -48,17 +48,17 @@
        <div style="clear:both;"></div>
 
     <div id="menu">
-        {% if kats %}
-        <h2>KATEGORIE:</h2>
-        <ul>
-        {% for kat in kats %}
-            <li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>
-            <!--<li><a href="{% url 'index'  %}">{{ kat.nazwa }}</a></li>-->
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No products are available.</p>
-    {% endif %}
+        <!--{% if kats %}-->
+        <!--<h2>KATEGORIE:</h2>-->
+        <!--<ul>-->
+        <!--{% for kat in kats %}-->
+            <!--<li><a href="{% url 'kategoria' kat.id  %}">{{ kat.nazwa }}</a></li>-->
+            <!--&lt;!&ndash;<li><a href="{% url 'index'  %}">{{ kat.nazwa }}</a></li>&ndash;&gt;-->
+        <!--{% endfor %}-->
+        <!--</ul>-->
+    <!--{% else %}-->
+        <!--<p>No products are available.</p>-->
+    <!--{% endif %}-->
     </div>
 
     <div id="content">
