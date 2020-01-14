@@ -14,18 +14,21 @@
         <input type="submit" value="Zmień status" />
 
     </form>
-    </div>
+</div>
+<br>
     <table style="width:100%">
         <tr>
             <th style="width=20px">id</th>
             <th>nazwa</th>
             <th>stan</th>
+            <th style="width=100px">lokacja </th>
         </tr>
     {% for item in cart.products.all %}
         <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.nazwa }}</td>
             <td>{{ item.stan }}</td>
+            <td> {{ item.regał }}    {{item.półka}}    {{ item.lokacja_x }}</td>
             <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
         </tr>
     {% endfor %}
