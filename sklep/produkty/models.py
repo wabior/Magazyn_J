@@ -23,16 +23,6 @@ class Kategoria(models.Model):
         verbose_name        = "Kategoria"
         verbose_name_plural = "Kategorie"
 
-class Tagi(models.Model):
-    def __str__(self):
-        return self.name
-    name    = models.CharField(max_length=40)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        verbose_name        = "Tag"
-        verbose_name_plural = "Tagi"
 
 class Produkty(models.Model):
     def __str__(self):
@@ -43,7 +33,6 @@ class Produkty(models.Model):
     cena    = models.DecimalField(max_digits=99999 ,decimal_places=2)
     producent = models.ForeignKey(Producent,on_delete=models.CASCADE,blank=True,null=True)
     kategoria = models.ForeignKey(Kategoria,on_delete=models.CASCADE,blank=True,null=True)
-    tagi      = models.ManyToManyField(Tagi,blank=True,null=True)
     obraz   = models.FileField(upload_to='', blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

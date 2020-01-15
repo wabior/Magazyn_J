@@ -16,7 +16,7 @@
     </form>
 </div>
 <br>
-    <table style="width:100%">
+    <table>
         <tr>
             <th style="width=20px">id</th>
             <th>nazwa</th>
@@ -32,8 +32,9 @@
             <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
         </tr>
     {% endfor %}
-    </table>
 
+    </table>
+    </br>
 {% else %}
     BRAK ZAMÓWIEŃ
 {% endif %}

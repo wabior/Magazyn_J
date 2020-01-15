@@ -22,6 +22,7 @@ li a:hover
     width:1000px;
     margin-left: auto;
     margin-right: auto;
+    background-image:;
 
 }
 
@@ -51,7 +52,7 @@ li a:hover
 #menu
 {
     float:left;
-    width:200px;
+    width:0px;
     min-height:400px;
     text-align:left;
     color:rgb(215,215,215);#004080;
@@ -60,9 +61,11 @@ li a:hover
 
 #content
 {
-
+    background-image:; #url("chevron.png");
+    background-color    :   gray;
+    padding     :   15px;
     float   : left;
-    width   : 800px;
+    width   : 100%;
     height  : ;
     overflow: auto;
 }
@@ -80,6 +83,7 @@ li a:hover
 
 #container1
 {
+
     width:800px;
     margin-left: auto;
     margin-right: auto;
@@ -224,6 +228,12 @@ a:hover
     color:#77a3ea;
 }
 
+#dodaj{
+text-align  :   left;
+padding     :   0px;
+
+}
+
 #dodaj a:link
 {
 color:rgb(50,215,50);
@@ -239,15 +249,26 @@ position: absolute;
     color:goldenrod;
 }
 
-table {
-  border-collapse: collapse;
-}
 
-table, th, td {
+
+table   {
+margin-left:auto;
+    margin-right:auto;
+    position : ;
+  width : 100%;
   border: 1px solid black;
+   border-collapse: collapse;
   padding: 10px;
   text-align: left;
 }
+th, td
+{
+border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+
 th {
   height: 40px;
 }

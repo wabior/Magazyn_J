@@ -20,7 +20,10 @@
 
         <div id="topbar1">
             <div id="t1">
-                <h1>WIDOK MAGAZYNIERA</h1><br>
+                {% if user.is_authenticated %}
+                Witaj, <h1>{{ user.username }} </h1>
+
+                <br>
             </div>
             <div id="t2">
                  <!--<a href="{% url 'cart' %}"><h1> ZAMÓWIENIE </h1></a>-->
@@ -53,29 +56,38 @@
         </div>
 
     <div style="clear:both;"></div>
-    <div id = "content">
 
-            <h3>ilosc zamówień: {{ last_cart.id }}</h3>
+    <div id = "content">
+        {% if all_carts %}
+        <h3>ilosc zamówień: {{ count_carts }}</h3>
 
         <table style="width:100%">
         <tr>
             <th style="width:120px">id</th>
+            <th style="width:auto">lista części</th>
             <th style="width:100px">status</th>
             <th style="width:100px">akcja</th>
         </tr>
     {% for c in all_carts %}
         <tr>
             <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
+            <td>{% for part in c.products.objects.all %}<h5>{{ part.nazwa }} </h5>{%endfor%}</td>
             <td>{{ c.status }}</td>
             <td><a href= " {% url 'delete_cart' c.id %} " >usuń</a></td>
         </tr>
     {% endfor %}
     </table>
-
+        {% else %}
+        <h2>brak zamówień</h2>
+        {% endif %}
     </div>
 
 
 </div>
+{% else %}
+                 <p>Zaloguj się dramiu.</p>
+                {% endif %}
+
 
 
 </body>

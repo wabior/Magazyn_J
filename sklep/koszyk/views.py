@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404, redirect
 from django.urls import reverse
+from django.template import RequestContext
 # Create your views here.
 from .models import Cart
 from .forms import Zmiana_Statusu
@@ -33,9 +34,11 @@ def carts(request):
     return render(request, template, context)
 
 def magazyn(request):
+    czy_sprzedawca = request.user.groups.filter(name='Sprzedawca').exists()
     all_carts = Cart.objects.all()
     last_cart = Cart.objects.last()
-    context = {"all_carts": all_carts, "last_cart": last_cart, }
+    count_carts = Cart.objects.count()
+    context = {"czy_sprzedawca": czy_sprzedawca,"all_carts": all_carts, "last_cart": last_cart, 'count_carts': count_carts,}
     template = "cart/baza_magazyn.html"
     return render(request, template, context)
 
