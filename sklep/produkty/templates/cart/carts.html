@@ -1,18 +1,38 @@
-{% extends 'produkty/baza.html' %}
+{% extends 'cart/baza_magazyn.html' %}
 
-{% block contents %}
-<br>
-<h1>LISTA ZAMÓWIEN</h1>
-<a href= " {% url 'new_cart' %} " ><h1>Nowe zamówienie</h1></a>
-<h3>ilosc zamówień: {{ last_cart.id }}</h3>
+{% block content %}
+
+<div id = "content">
+        {% if all_carts %}
+        <h3>ilosc zamówień: {{ count_carts }}</h3>
+
+        <table style="width:100%">
+        <tr>
+            <th style="width:120px">id</th>
+            <th style="width:auto">lista części</th>
+            <th style="width:100px">status</th>
+            {% if czy_sprzedawca %}
+            <th style="width:100px">akcja</th>
+            {% endif %}
+        </tr>
+    {% for c in all_carts %}
+        <tr>
+            <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
+            <td>{% for part in c.products.objects.all %}<h5>{{ part.nazwa }} </h5>{%endfor%}</td>
+            <td>{{ c.status }}</td>
+            {% if czy_sprzedawca %}
+            <td><a href= " {% url 'delete_cart' c.id %} " >usuń</a></td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </table>
+        {% else %}
+        <h2>brak zamówień</h2>
+        {% endif %}
+    </div>
 
 
-{% for c in all_carts %}
-<a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a><br>
-
-{% endfor %}
+</div>
 
 
-
-
-{% endblock contents %}
+{% endblock %}

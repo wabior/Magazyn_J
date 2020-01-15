@@ -8,29 +8,27 @@
     <title>Baza Magazyn</title>
 </head>
 <body>
+{% if user.is_authenticated %}
 
 <div id="container">
     <div id="logo">
-            {% load static %}
-            <a href="{% url 'index'  %}"><img  height="125" src="{% static '/produkty/logo.png' %}" alt="My logo"></a>
+        <a href="{% url 'index'  %}"><img  height="125" src="{% static '/produkty/logo.png' %}" alt="My logo"></a>
     </div>
-
 
     <div id="topbarr">
 
         <div id="topbar1">
-            <div id="t1">
-                {% if user.is_authenticated %}
-                Witaj, <h1>{{ user.username }} </h1>
+            <div id="t2">
 
+            <a href="{% url 'magazyn' %}"><h1> ZAMÓWIENIA </h1></a>
                 <br>
             </div>
-            <div id="t2">
-                 <!--<a href="{% url 'cart' %}"><h1> ZAMÓWIENIE </h1></a>-->
-                <a href="{% url 'magazyn' %}"><h1> ZAMÓWIENIA </h1></a>
+            <div id="t1" >
+                 <h1>zalogowany: {{ user.username }} </h1>
             </div>
-            <div id="t3">
-                <a href="{% url 'logout' %}"><h1> WYLOGUJ </h1></a>
+
+            <div style="text-align:center;padding:30px; padding-right:150px;">
+                <a href="{% url 'logout' %}"> wyloguj </a>
             </div>
 
         </div>
@@ -41,7 +39,7 @@
 
         <div id="topbar1">
             <div id="t3">
-                <h1>Lista zamówień</h1>
+                <h1>lista zamówień:</h1>
             </div>
             <div id="t1">
                  <form role="search" action="/s/">
@@ -50,45 +48,20 @@
                     </form>
             </div>
             <div id="t2">
-                <a href= " {% url 'new_cart' %} " ><h1>Nowe zamówienie</h1></a>
+                {% if czy_sprzedawca %}
+                <a  href= " {% url 'new_cart' %} " ><h1>Nowe zamówienie</h1></a>
+                {% endif %}
             </div>
 
         </div>
 
     <div style="clear:both;"></div>
-
-    <div id = "content">
-        {% if all_carts %}
-        <h3>ilosc zamówień: {{ count_carts }}</h3>
-
-        <table style="width:100%">
-        <tr>
-            <th style="width:120px">id</th>
-            <th style="width:auto">lista części</th>
-            <th style="width:100px">status</th>
-            <th style="width:100px">akcja</th>
-        </tr>
-    {% for c in all_carts %}
-        <tr>
-            <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
-            <td>{% for part in c.products.objects.all %}<h5>{{ part.nazwa }} </h5>{%endfor%}</td>
-            <td>{{ c.status }}</td>
-            <td><a href= " {% url 'delete_cart' c.id %} " >usuń</a></td>
-        </tr>
-    {% endfor %}
-    </table>
-        {% else %}
-        <h2>brak zamówień</h2>
+    {% else %}
+        <p>Zaloguj się dramiu.</p>
         {% endif %}
-    </div>
+    {% block content %}
 
-
-</div>
-{% else %}
-                 <p>Zaloguj się dramiu.</p>
-                {% endif %}
-
-
+    {% endblock %}
 
 </body>
 </html>

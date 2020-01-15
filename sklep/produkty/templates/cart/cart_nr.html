@@ -1,12 +1,18 @@
-{% extends 'produkty/baza.html' %}
+{% extends 'cart/baza_magazyn.html' %}
 
-{% block contents %}
 
+{% block content %}
 {% if cart %}
-    <h1>zamówienie {{cart.id}} </h1>
-<div id="dodaj"><a href= "{% url 'kategorie' cart.id %}">DODAJ POZYCJĘ</a></div>
-<div class="box">
+<div id="content">
+    <div id="dodaj">
+        {% if czy_sprzedawca %}
+        <a href= "{% url 'kategorie' cart.id %}">DODAJ POZYCJĘ</a>
+        {% endif %}<br>
+        <h1>zamówienie {{cart.id}} </h1>
+    </div>
 
+<div class="box">
+    <br>
     <form  method="POST"> {% csrf_token %}
 
         {{ form.as_table }}
@@ -16,19 +22,24 @@
     </form>
 </div>
 <br>
+
     <table>
         <tr>
             <th style="width=20px">id</th>
             <th>nazwa</th>
             <th>stan</th>
-            <th style="width=100px">lokacja </th>
+            {% if not czy_sprzedawca %}
+                <th style="width=100px">lokacja </th>
+            {% endif %}
         </tr>
     {% for item in cart.products.all %}
         <tr>
             <td>{{ item.id }}</td>
             <td>{{ item.nazwa }}</td>
             <td>{{ item.stan }}</td>
+            {% if not czy_sprzedawca %}
             <td> {{ item.regał }}    {{item.półka}}    {{ item.lokacja_x }}</td>
+            {% endif %}
             <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
         </tr>
     {% endfor %}
@@ -38,5 +49,6 @@
 {% else %}
     BRAK ZAMÓWIEŃ
 {% endif %}
+    </div>
 
-{% endblock contents %}
+{% endblock content %}

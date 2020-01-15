@@ -16,12 +16,12 @@ def view(request):
 
 def cart_nr(request,c_id):
     cart = get_object_or_404(Cart,id=c_id)
-    #kats = Kategoria.objects.all()
+    czy_sprzedawca = request.user.groups.filter(name='Sprzedawca').exists()
     form = Zmiana_Statusu(request.POST or None, instance=cart)
     if form.is_valid():
         form.save()
         return redirect("magazyn")
-    context = {"cart": cart, "form":form,}
+    context = {"cart": cart, "form": form, 'czy_sprzedawca': czy_sprzedawca, }
     template = "cart/cart_nr.html"
     return render(request, template, context)
 
@@ -39,7 +39,7 @@ def magazyn(request):
     last_cart = Cart.objects.last()
     count_carts = Cart.objects.count()
     context = {"czy_sprzedawca": czy_sprzedawca,"all_carts": all_carts, "last_cart": last_cart, 'count_carts': count_carts,}
-    template = "cart/baza_magazyn.html"
+    template = "cart/carts.html"
     return render(request, template, context)
 
 def new_cart(request):
