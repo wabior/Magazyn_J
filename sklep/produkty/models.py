@@ -43,7 +43,7 @@ class Produkty(models.Model):
     lokacja_x_wybory = models.TextChoices('lokacje', 'slot_1 slot_2 slot_3 slot_4 slot_5 slot_6 slot_7 slot_8')
     półka_wybory = models.TextChoices('półki', 'Półka_1 Półka_2 Półka_3 Półka_4')
     regał = models.CharField(default='Regał_1', blank=True, choices=regał_wygory.choices, max_length=30)
-    półka = models.CharField(default='Półka_1', blank=True, choices=półka_wybory.choices, max_length=30)
+    półka = models.CharField(default='Półka_3', blank=False, choices=półka_wybory.choices, max_length=30)
     lokacja_x = models.CharField(default='slot_1', blank=True, choices=lokacja_x_wybory.choices, max_length=30)
 
 
