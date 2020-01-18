@@ -29,16 +29,23 @@ def cart_nr(request,c_id):
 def carts(request):
     all_carts = Cart.objects.all()
     last_cart = Cart.objects.last()
-    context = {"all_carts": all_carts, "last_cart":last_cart, }
+    wyslany_cart = Cart.objects.filter(status__iexact="NOWE")
+    context = {"all_carts": all_carts, "last_cart":last_cart,"wyslany_cart": wyslany_cart}
     template = "cart/carts.html"
     return render(request, template, context)
 
 def magazyn(request):
     czy_sprzedawca = request.user.groups.filter(name='Sprzedawca').exists()
+    if request.user.groups.filter(name='Sprzedawca').exists():
+        status_filtr = Cart.objects.all()
+    else:
+        status_filtr = Cart.objects.filter(status__iexact="WYSŁANE")
+
     all_carts = Cart.objects.all()
     last_cart = Cart.objects.last()
     count_carts = Cart.objects.count()
-    context = {"czy_sprzedawca": czy_sprzedawca,"all_carts": all_carts, "last_cart": last_cart, 'count_carts': count_carts,}
+    context = {"czy_sprzedawca": czy_sprzedawca,"all_carts": all_carts,
+               "last_cart": last_cart, 'count_carts': count_carts, "status_filtr": status_filtr}
     template = "cart/carts.html"
     return render(request, template, context)
 
