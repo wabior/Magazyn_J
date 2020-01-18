@@ -25,9 +25,22 @@
     <hr /><br />
 
 <div id="cena">
-        Cena: &nbsp; {{ produkt.cena }} zł &nbsp; &nbsp;
+    <table >
+        <tr >
+            <td style="text-align:right;">
+                Cena: {{ produkt.cena }} zł
+            </td>
+            <td style="text-align:right;">
+                Stan: {{ produkt.stan }}
+            </td>
+        </tr>
+    </table><br>
+    {% if produkt.stan > 0 %}
     <button type="button" onclick= " location.href= ' {% url 'update_cart' produkt.nazwa  %} ' ">dodaj</button>
     <!--<a href="{% url 'update_cart' produkt.nazwa %}">dodaj</a>-->
+    {% else %}
+    nie można dodać do zamówienia
+    {% endif %}
     </div>
     </br>
 

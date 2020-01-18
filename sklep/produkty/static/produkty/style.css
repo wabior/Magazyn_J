@@ -151,14 +151,15 @@ text-align:right;
 {
     border:10px;
 
-    width:350px;
+    width:50%;
     float:left;
     font-family: "Courier", Times, serif;
 }
 #obraz
 {
     float:left;
-    width:250px;
+    width:auto;
+    padding-left:50px;
 }
 
 button {

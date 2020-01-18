@@ -28,6 +28,10 @@
             {% if not czy_sprzedawca %}
                 <th style="width=100px">lokacja </th>
             {% endif %}
+            {% if czy_sprzedawca %}
+            <th>akcja</th>
+            {% endif %}
+
         </tr>
     {% for item in cart.products.all %}
         <tr>
@@ -37,7 +41,9 @@
             {% if not czy_sprzedawca %}
             <td> {{ item.regał }}    {{item.półka}}    {{ item.lokacja_x }}</td>
             {% endif %}
-            <td><a href="{% url 'remove_from_cart' item.id %}">usuń</a></td>
+            {% if czy_sprzedawca %}
+            <td><a href="{% url 'remove_from_cart' item.id cart.id %}">usuń</a></td>
+            {% endif %}
         </tr>
     {% endfor %}
 

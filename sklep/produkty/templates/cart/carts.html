@@ -16,14 +16,16 @@
 
         <tr>
             <th style="width:120px">id</th>
-            <th style="width:auto">lista części</th>
-            <th style="width:100px">data utworzania</th>
+            <th style="width:80px">ilość części</th>
+            <th style="width:260px">data utworzania</th>
             <th>
                 {% if czy_sprzedawca %}
                 <form label="" method="POST" action="filtruj"> {% csrf_token %}
                     {{ form_f.as_p }}
                     <!--<input type="submit" value="filtruj" />-->
                 </form>
+                {% else %}
+                status
                 {% endif %}
             </th>
             {% if czy_sprzedawca %}
@@ -33,10 +35,7 @@
     {% for c in status_filtr %}
         <tr>
             <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
-            <td>{% for part in c.products.all %}
-                    {{ part.nazwa }} <br>
-                {%endfor%}
-            </td>
+            <td>{{ c.products.count }}</td>
             <td>{{ c.created_at }}</td>
             <td>{{ c.status }}</td>
             {% if czy_sprzedawca %}

@@ -10,10 +10,8 @@ class Zmiana_Statusu(forms.ModelForm):
         }
 
 class Status_f(forms.Form):
-    my_choices = [('','filr'),
-                ('all','all'),
-                                        ('NOWE', 'NOWE'),
-                                        ('ZAPISANE', 'ZAPISANE'),
-                                        ('WYSŁANE', 'WYSŁANE'),
-                                        ('GOTOWE', 'GOTOWE')]
-    status = forms.ChoiceField(label="",choices=my_choices, widget = forms.Select(attrs={'onchange': 'submit()'}))
+    my_choices = [('','filr'),('all','all'),('NOWE', 'NOWE'),
+                  ('ZAPISANE', 'ZAPISANE'),('WYSŁANE', 'WYSŁANE'),
+                  ('GOTOWE', 'GOTOWE'),('BRAK_MOŻLIWOŚCI_REALIZACJI','BRAK_MOŻLIWOŚCI_REALIZACJI'),
+                  ('ARCHIWALNE','ARCHIWALNE')]
+    status = forms.ChoiceField(choices=my_choices, widget = forms.Select(attrs={'onchange': 'submit()'}))

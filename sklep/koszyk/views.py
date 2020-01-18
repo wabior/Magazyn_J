@@ -54,6 +54,7 @@ def magazyn(request):
     all_carts = Cart.objects.all()
     last_cart = Cart.objects.last()
     count_carts = Cart.objects.count()
+
     context = {"czy_sprzedawca": czy_sprzedawca, "all_carts": all_carts,
                "last_cart": last_cart, 'count_carts': count_carts,
                "status_filtr": status_filtr, "form_f": form_f}
@@ -113,16 +114,21 @@ def update_cart_m(request, nazwa, c_id):
     cart.products.add(product)
     template = "cart/cart_nr.html"
     context = {"c_id": c_id}
-    # return HttpResponseRedirect(reverse("cart_nr"))
+    #return HttpResponseRedirect(reverse("cart_nr"))
     return redirect("cart_nr", c_id)
-    # return render(request, template, context)
+    #render(request, template, context)
 
-
-def remove_from_cart(request, id):
-    cart = Cart.objects.all()[0]
+def remove_from_cart(request, id, c_id):
+    cart = Cart.objects.get(id=c_id)
     cartitem = Produkty.objects.get(id=id)
     cart.products.remove(cartitem)
-    return HttpResponseRedirect(reverse("cart"))
+    return redirect("cart_nr",c_id)
+
+# def remove_from_cart1(request, id):
+#     cart = Cart.objects.all()[0]
+#     cartitem = Produkty.objects.get(id=id)
+#     cart.products.remove(cartitem)
+#     return redirect(reverse("cart_nr"))
 
 
 def delete_cart(request, id):
