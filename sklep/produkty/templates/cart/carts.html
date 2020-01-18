@@ -8,17 +8,26 @@
     {% else %}
     nie filtruje
     {% endif %}
+
         {% if all_carts %}
         <h3>ilosc zamówień: {{ count_carts }}</h3>
 
         <table style="width:100%">
+
         <tr>
             <th style="width:120px">id</th>
             <th style="width:auto">lista części</th>
-            <th style="width:auto">data utworzania</th>
-            <th style="width:100px">status</th>
+            <th style="width:100px">data utworzania</th>
+            <th>
+                {% if czy_sprzedawca %}
+                <form label="" method="POST" action="filtruj"> {% csrf_token %}
+                    {{ form_f.as_p }}
+                    <!--<input type="submit" value="filtruj" />-->
+                </form>
+                {% endif %}
+            </th>
             {% if czy_sprzedawca %}
-            <th style="width:100px">akcja</th>
+            <th style="width:50px">akcja</th>
             {% endif %}
         </tr>
     {% for c in status_filtr %}
@@ -39,10 +48,6 @@
         {% else %}
         <h2>brak zamówień</h2>
         {% endif %}
-    </div>
-
-
 </div>
-
 
 {% endblock %}

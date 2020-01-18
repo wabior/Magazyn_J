@@ -8,3 +8,12 @@ class Zmiana_Statusu(forms.ModelForm):
         labels = {
             "status": "status    :"
         }
+
+class Status_f(forms.Form):
+    my_choices = [('','filr'),
+                ('all','all'),
+                                        ('NOWE', 'NOWE'),
+                                        ('ZAPISANE', 'ZAPISANE'),
+                                        ('WYSŁANE', 'WYSŁANE'),
+                                        ('GOTOWE', 'GOTOWE')]
+    status = forms.ChoiceField(label="",choices=my_choices, widget = forms.Select(attrs={'onchange': 'submit()'}))

@@ -2,6 +2,11 @@
 
 {% block contents %}
 
+ <form  method="POST"> {% csrf_token %}
+        {{ form_f.as_table }}
+        <input type="submit" value="huj" />
+    </form>
+
 {% if cart %}
     <h1>zamówienie {{cart.id}} </h1>
     <table >

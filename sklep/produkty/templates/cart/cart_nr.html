@@ -14,11 +14,8 @@
 <div class="box">
     <br>
     <form  method="POST"> {% csrf_token %}
-
         {{ form.as_table }}
-
         <input type="submit" value="Zmień status" />
-
     </form>
 </div>
 <br>

@@ -49,5 +49,7 @@ urlpatterns = [
     path('zamow',zamowienie, name='zamowienie'),
     path('choice', choice, name='choice'),
     path('magazyn', magazyn, name='magazyn'),
+    path('magazyn/<status_f>', magazyn_f, name='magazyn_f'),
     path('delete_cart/<int:id>', delete_cart, name='delete_cart'),
+    path('filtruj', filtruj, name='filtruj')
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )
