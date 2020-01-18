@@ -4,7 +4,14 @@
     <list default="true" id="9eecbc40-a17b-4cac-b48f-bb32292b1968" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sklep/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sklep/produkty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/koszyk/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/koszyk/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/koszyk/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/koszyk/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/produkty/static/produkty/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/static/produkty/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklep/sklep/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sklep/sklep/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,22 +21,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="21" />
+            <state relative-caret-position="478">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,24 +37,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            <state relative-caret-position="608">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/logon.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -63,41 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sklep/sklep/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-              <folding>
-                <element signature="e#629#661#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklep/koszyk/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="126" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sklep/produkty/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7488">
-              <caret line="234" column="17" selection-start-line="234" selection-start-column="17" selection-end-line="234" selection-end-column="17" />
+            <state relative-caret-position="127">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -105,10 +62,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sklep/koszyk/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="23" column="77" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
+            <state relative-caret-position="319">
+              <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sklep/koszyk/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
-                <element signature="e#0#86#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,10 +106,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="288">
+              <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="161" column="22" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/logo.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -136,6 +143,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>.select</find>
+      <find>Status</find>
+      <find>form</find>
+      <find>action</find>
+      <find>magazyn</find>
     </findStrings>
     <replaceStrings>
       <replace>.select</replace>
@@ -170,26 +181,26 @@
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/choice.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/baza_magazyn.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/registration/choice.html" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/forms.py" />
-        <option value="$PROJECT_DIR$/sklep/koszyk/models.py" />
-        <option value="$PROJECT_DIR$/sklep/koszyk/forms.py" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/kategorie.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/katf kopia.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/kat_m.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/views.py" />
-        <option value="$PROJECT_DIR$/sklep/sklep/urls.py" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html" />
         <option value="$PROJECT_DIR$/sklep/sklep/settings.py" />
         <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/baza.html" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/admin.py" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/baza_magazyn.html" />
-        <option value="$PROJECT_DIR$/sklep/koszyk/views.py" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html" />
-        <option value="$PROJECT_DIR$/sklep/produkty/static/produkty/style.css" />
-        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html" />
         <option value="$PROJECT_DIR$/sklep/produkty/models.py" />
+        <option value="$PROJECT_DIR$/sklep/koszyk/models.py" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/baza_magazyn.html" />
+        <option value="$PROJECT_DIR$/sklep/koszyk/forms.py" />
+        <option value="$PROJECT_DIR$/sklep/produkty/static/produkty/style.css" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html" />
+        <option value="$PROJECT_DIR$/sklep/sklep/urls.py" />
+        <option value="$PROJECT_DIR$/sklep/koszyk/views.py" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html" />
+        <option value="$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html" />
       </list>
     </option>
   </component>
@@ -205,17 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Magazyn_G" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,23 +232,44 @@
               <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
               <item name="Magazyn_G" type="462c0819:PsiDirectoryNode" />
               <item name="sklep" type="462c0819:PsiDirectoryNode" />
-              <item name="koszyk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Magazyn_G" type="462c0819:PsiDirectoryNode" />
-              <item name="sklep" type="462c0819:PsiDirectoryNode" />
               <item name="produkty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
               <item name="Magazyn_G" type="462c0819:PsiDirectoryNode" />
               <item name="sklep" type="462c0819:PsiDirectoryNode" />
+              <item name="produkty" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Magazyn_G" type="462c0819:PsiDirectoryNode" />
               <item name="sklep" type="462c0819:PsiDirectoryNode" />
+              <item name="produkty" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Magazyn_G" type="462c0819:PsiDirectoryNode" />
+              <item name="sklep" type="462c0819:PsiDirectoryNode" />
+              <item name="produkty" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="produkty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Magazyn_G" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Magazyn_G" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -263,15 +284,15 @@
     <property name="settings.editor.splitter.proportion" value="0.39084274" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\cart" />
+      <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\registration" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\produkty" />
       <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\registration" />
       <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\cart" />
       <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\static\produkty" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\cart" />
-      <recent name="C:\Users\wabior\PycharmProjects\Magazyn_G\sklep\produkty\templates\registration" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -375,7 +396,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579082332900</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="funkcje zależą od zalogowanej grupy:&#10;sprzedawca dodaje i usuwa zamówienia&#10;magazynier widzi lokacje">
+      <created>1579088784688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579088784688</updated>
+    </task>
+    <task id="LOCAL-00013" summary="magazynier widzi tylko zamowienia o statusie 'WYSŁANE'">
+      <created>1579328691536</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1579328691536</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dodano filtrowanie po statusie dla sprzedawcy">
+      <created>1579354366230</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579354366230</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -391,7 +433,7 @@
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22387268" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20530504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -402,8 +444,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32912844" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49867374" weight="0.31428573" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49761274" visible="true" weight="0.29587156" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5023873" side_tool="true" weight="0.29485714" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49708223" visible="true" weight="0.29472476" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50291777" side_tool="true" weight="0.29472476" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32798165" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32912844" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -423,7 +465,9 @@
     <MESSAGE value="dodano w bazie regał, półkę i pozycję&#10;wyświetla się w zamówieniu" />
     <MESSAGE value="dodano wyświetlanie i zwracanie zmiennej zalogowanego użytkownika" />
     <MESSAGE value="funkcje zależą od zalogowanej grupy:&#10;sprzedawca dodaje i usuwa zamówienia&#10;magazynier widzi lokacje" />
-    <option name="LAST_COMMIT_MESSAGE" value="funkcje zależą od zalogowanej grupy:&#10;sprzedawca dodaje i usuwa zamówienia&#10;magazynier widzi lokacje" />
+    <MESSAGE value="magazynier widzi tylko zamowienia o statusie 'WYSŁANE'" />
+    <MESSAGE value="dodano filtrowanie po statusie dla sprzedawcy" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodano filtrowanie po statusie dla sprzedawcy" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/katf.html">
@@ -506,26 +550,6 @@
         <state relative-caret-position="-65" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/koszyk/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/kategorie.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -564,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -584,56 +601,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/baza_magazyn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/prism.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html">
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="960">
+          <caret line="45" selection-start-line="45" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -644,54 +618,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/sklep/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#629#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7488">
-          <caret line="234" column="17" selection-start-line="234" selection-start-column="17" selection-end-line="234" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/koszyk/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="23" column="77" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html">
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="2" selection-end-column="20" />
+          <caret selection-end-line="3" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/baza_magazyn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3648">
+          <caret line="124" column="56" lean-forward="true" selection-start-line="124" selection-start-column="56" selection-end-line="124" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sklep/koszyk/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="126" />
+        <state relative-caret-position="128">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sklep/produkty/models.py">
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/koszyk/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/static/produkty/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="161" column="22" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/sklep/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/koszyk/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_block.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/produkty/detail_m.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/carts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklep/produkty/templates/cart/cart_nr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
