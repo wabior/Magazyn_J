@@ -1,0 +1,12 @@
+{% extends 'cart/baza_magazyn.html' %}
+
+{% block content %}
+<table>
+    <form method="POST" action="przyjmij"> {% csrf_token %}
+        {{ form_p.as_table }}
+
+    <input style="float:right;" type="submit" value="zapisz">
+    </form>
+</table>
+
+{% endblock %}

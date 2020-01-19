@@ -20,9 +20,12 @@ from django.urls import path
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls.static import static
+
 from produkty.views import *
-from django.urls import include
+#from sklep.produkty.views import *
 from koszyk.views import *
+from django.urls import include
+
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -51,5 +54,6 @@ urlpatterns = [
     path('magazyn', magazyn, name='magazyn'),
     path('magazyn/<status_f>', magazyn_f, name='magazyn_f'),
     path('delete_cart/<int:id>', delete_cart, name='delete_cart'),
-    path('filtruj', filtruj, name='filtruj')
+    path('filtruj', filtruj, name='filtruj'),
+    path('przyjmij', przyjmij, name='przyjmij'),
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )

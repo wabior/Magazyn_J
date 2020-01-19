@@ -3,7 +3,7 @@ from django.db import models
 from produkty.models import Produkty
 
 class Cart(models.Model):
-    products = models.ManyToManyField(Produkty, null=True, blank=True)
+    products = models.ManyToManyField(Produkty, blank=True)
     total = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True,default=0)
     Statusy = models.TextChoices('Statusy', 'NOWE ZAPISANE WYSŁANE GOTOWE BRAK_MOŻLIWOŚCI_REALIZACJI ZREALIZOWANE ARCHIWALNE')
     status = models.CharField(default='NOWE', blank=0, choices=Statusy.choices, max_length=30)

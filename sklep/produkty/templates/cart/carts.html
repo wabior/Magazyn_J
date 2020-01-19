@@ -17,7 +17,8 @@
         <tr>
             <th style="width:120px">id</th>
             <th style="width:80px">ilość części</th>
-            <th style="width:260px">data utworzania</th>
+            <th style="width:240px">data utworzania</th>
+            <th style="width:240px">zmodyfikowano</th>
             <th>
                 {% if czy_sprzedawca %}
                 <form label="" method="POST" action="filtruj"> {% csrf_token %}
@@ -37,6 +38,7 @@
             <td><a href= " {% url 'cart_nr' c.id  %} " >zamówienie {{c.id}}</a></td>
             <td>{{ c.products.count }}</td>
             <td>{{ c.created_at }}</td>
+            <td>{{ c.updated_at }}</td>
             <td>{{ c.status }}</td>
             {% if czy_sprzedawca %}
             <td><a href= " {% url 'delete_cart' c.id %} " >usuń</a></td>

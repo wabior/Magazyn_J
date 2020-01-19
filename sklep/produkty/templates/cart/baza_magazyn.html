@@ -19,11 +19,13 @@
     <div id="topbarr">
 
         <div id="topbar1">
+
             <div id="t2">
 
-            <a href="{% url 'magazyn' %}"><h1> ZAMÓWIENIA </h1></a>
+                <a href="{% url 'magazyn' %}"><h1> ZAMÓWIENIA </h1></a>
                 <br>
             </div>
+
             <div id="t1" >
                  <h1>zalogowany: {{ user.username }} </h1>
             </div>
@@ -45,6 +47,11 @@
                      <!--<input class= "szukaj" type="text" name="q" placeholder="szukaj">-->
                      <!--<button type="submit">znajdź</button>-->
                  <!--</form>-->
+                {% if not czy_sprzedawca %}
+
+                <a href=" {% url 'przyjmij' %} "><h1>PRZYJĘCIE TOWARU</h1></a>
+
+                {% endif %}
             </div>
             <div id="t2">
                 {% if czy_sprzedawca %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render,reverse,redirect,get_object_or_404
 from django.http import Http404
 from django.http import HttpResponse
 from django.template import loader
@@ -126,3 +126,12 @@ def zamowienie(request):
 
 def choice(request):
     return render(request,'registration/choice.html')
+
+def przyjmij(request):
+    form_p = Przyjmij(request.POST or None)
+    if form_p.is_valid():
+        form_p.save()
+        print('dodano produkt')
+        return redirect("przyjmij")
+    context = {'form_p':form_p}
+    return render(request, 'produkty/add_towar.html', context)
