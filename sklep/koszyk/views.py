@@ -1,9 +1,8 @@
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404, redirect
 from django.urls import reverse
-from django.template import RequestContext
 # Create your views here.
 from .models import Cart
-from .forms import Zmiana_Statusu, Status_f
+from .forms import Zmiana_Statusu, Status_f, Zmiana_Statusu_M
 
 from produkty.models import Produkty, Kategoria
 
@@ -22,7 +21,10 @@ def view(request):
 def cart_nr(request, c_id):
     cart = get_object_or_404(Cart, id=c_id)
     czy_sprzedawca = request.user.groups.filter(name='Sprzedawca').exists()
-    form = Zmiana_Statusu(request.POST or None, instance=cart)
+    if czy_sprzedawca:
+        form = Zmiana_Statusu(request.POST or None, instance=cart)
+    else:
+        form = Zmiana_Statusu_M(request.POST or None, instance=cart)
     if form.is_valid():
         form.save()
         return redirect("magazyn")
@@ -46,7 +48,7 @@ def carts(request):
 
 def magazyn(request):
     czy_sprzedawca = request.user.groups.filter(name='Sprzedawca').exists()
-    if request.user.groups.filter(name='Sprzedawca').exists():
+    if czy_sprzedawca: #request.user.groups.filter(name='Sprzedawca').exists():
         status_filtr = Cart.objects.all()
     else:
         status_filtr = Cart.objects.filter(status__iexact="WYSŁANE")
@@ -67,8 +69,10 @@ def magazyn_f(request,status_f):
     if request.user.groups.filter(name='Sprzedawca').exists():
         if status_f != "all":
             status_filtr = Cart.objects.filter(status=status_f)
+            print('1:',str(status_filtr))
         else:
             status_filtr = Cart.objects.all()
+            print('2:',str(status_filtr))
     else:
         status_filtr = Cart.objects.filter(status=status_f)
     form_f = Status_f(request.POST or None)
